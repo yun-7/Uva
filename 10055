@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    long long hash, emt;
+    long long temp=0;
+    
+    while((scanf("%lld %lld", &hash, &emt)) !=EOF) {
+        if(emt < hash) {
+            temp = hash;
+            hash = emt;
+            emt = temp;
+        }
+        temp = emt - hash;
+        printf("%lld\n", temp);
+    }
+}
